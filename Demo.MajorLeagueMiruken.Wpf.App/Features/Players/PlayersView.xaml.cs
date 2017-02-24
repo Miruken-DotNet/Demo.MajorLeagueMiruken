@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Demo.MajorLeagueMiruken.Wpf.App
+namespace Demo.MajorLeagueMiruken.Wpf.App.Features.Players
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PlayersView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PlayersView
     {
-        public MainWindow()
+        public PlayersView()
         {
             InitializeComponent();
         }
