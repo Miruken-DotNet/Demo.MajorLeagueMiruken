@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Demo.MajorLeagueMiruken.Wpf.App.Features.MenuBar
+namespace Demo.MajorLeagueMiruken.Wpf.App.Features.Header
 {
     /// <summary>
-    /// Interaction logic for MenuBarView.xaml
+    /// Interaction logic for HeaderView.xaml
     /// </summary>
-    public partial class MenuBarView
+    public partial class HeaderView
     {
-        public MenuBarView()
+        public HeaderView()
         {
             InitializeComponent();
         }

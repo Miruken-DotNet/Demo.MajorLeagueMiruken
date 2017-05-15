@@ -136,11 +136,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Features\MenuBar\MenuBarView.xaml">
+    <Page Include="Features\Header\HeaderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Features\Players\CreateAPlayer\CreateAPlayerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Features\Players\PlayersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Features\Teams\CreateATeam\CreateATeamView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,21 +164,59 @@
     <Compile Include="AppLayout.xaml.cs">
       <DependentUpon>AppLayout.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Features\ColorEnumToStringConverter.cs" />
     <Compile Include="Features\FeatureController.cs" />
     <Compile Include="Features\IGuarded.cs" />
-    <Compile Include="Features\MenuBar\IMenuBar.cs" />
-    <Compile Include="Features\MenuBar\MenuBarView.xaml.cs">
-      <DependentUpon>MenuBarView.xaml</DependentUpon>
+    <Compile Include="Features\Header\IHeader.cs" />
+    <Compile Include="Features\Header\HeaderView.xaml.cs">
+      <DependentUpon>HeaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Players\CreateAPlayer\CreateAPlayerController.cs" />
+    <Compile Include="Features\Players\CreateAPlayer\CreateAPlayerView.xaml.cs">
+      <DependentUpon>CreateAPlayerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Features\Players\PlayersController.cs" />
     <Compile Include="Features\Players\PlayersView.xaml.cs">
       <DependentUpon>PlayersView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Features\SideEffects.cs" />
+    <Compile Include="Features\Teams\CreateATeam\CreateATeamController.cs" />
+    <Compile Include="Features\Teams\CreateATeam\CreateATeamView.xaml.cs">
+      <DependentUpon>CreateATeamView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Features\Teams\TeamsController.cs" />
     <Compile Include="Features\Teams\TeamsView.xaml.cs">
       <DependentUpon>TeamsView.xaml</DependentUpon>
     </Compile>
+    <Page Include="images\AppVectors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <DesignData Include="SampleData\PlayersSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignData>
+    <DesignData Include="SampleData\TeamsSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignData>
+    <DesignData Include="SampleData\PlayerSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignData>
+    <DesignData Include="SampleData\TeamSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignData>
+    <DesignData Include="SampleData\CreateATeamViewModelSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignData>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -208,6 +254,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\soccer-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.MajorLeagueMiruken.Api\Demo.MajorLeagueMiruken.Api.csproj">
+      <Project>{32b5e381-78a6-4adf-b008-f2c021d5586f}</Project>
+      <Name>Demo.MajorLeagueMiruken.Api</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

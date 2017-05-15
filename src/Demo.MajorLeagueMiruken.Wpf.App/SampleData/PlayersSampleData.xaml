@@ -1,0 +1,123 @@
+﻿<Api:Players xmlns:Api="clr-namespace:Demo.MajorLeagueMiruken.Api;assembly=Demo.MajorLeagueMiruken.Api" xmlns:Markup="clr-namespace:System.Windows.Markup;assembly=System.Xaml">
+	<Api:Players.AllPlayers>
+		<Markup:Array Type="{Markup:Type Api:Player}">
+            <Api:Player FullName="Kevin Baker" FirstName="Kevin" Id="3" LastName="Baker" Number="3" Age="37" BirthDate="02/02/1980">
+                <Api:Player.Team>
+                    <Api:Team Id="89" Name="Dallas" TeamColor="Blue">
+                        <Api:Team.Coach>
+                            <Api:Person FullName="David O'Hara" FirstName="David" Id="51" LastName="O'Hara" />
+                        </Api:Team.Coach>
+                        <Api:Team.Manager>
+                            <Api:Person FullName="Ric DeAnda" FirstName="Ric" Id="98" LastName="DeAnda" />
+                        </Api:Team.Manager>
+                        <Api:Team.Roster>
+                            <Markup:Array Type="{Markup:Type Api:Player}">
+                                <Api:Player FullName="Cori Drew" FirstName="Cori" Id="3" LastName="Drew" Number="1" />
+                                <Api:Player FullName="Kevin Baker" FirstName="Kevin" Id="3" LastName="Baker" Number="3" />
+                                <Api:Player FullName="Michael Dudley" FirstName="Michael" Id="7" LastName="Dudley" Number="7" />
+                                <Api:Player FullName="Craig Neuwirt" FirstName="Craig" Id="22" LastName="Neuwirt" Number="22" />
+                            </Markup:Array>
+                        </Api:Team.Roster>
+                    </Api:Team>
+                </Api:Player.Team>
+            </Api:Player>
+            <Api:Player FullName="Glen Donaldson" FirstName="Glen" Id="80" LastName="Donaldson" Number="11" Age="41" BirthDate="01/01/1976">
+                <Api:Player.Team>
+                    <Api:Team Id="42" Name="Calgary" TeamColor="White">
+                        <Api:Team.Coach>
+                            <Api:Person FullName="Wendy Brown" FirstName="Wendy" Id="39" LastName="Brown" />
+                        </Api:Team.Coach>
+                        <Api:Team.Manager>
+                            <Api:Person FullName="Brian Donaldson" FirstName="Brian" Id="55" LastName="Donaldson" />
+                        </Api:Team.Manager>
+                        <Api:Team.Roster>
+                            <Markup:Array Type="{Markup:Type Api:Player}">
+                                <Api:Player FullName="Glen Donaldson" FirstName="Glen" Id="80" LastName="Donaldson" Number="11" />
+                            </Markup:Array>
+                        </Api:Team.Roster>
+                    </Api:Team>
+                </Api:Player.Team>
+            </Api:Player>
+            <Api:Player FullName="Cori Drew" FirstName="Cori" Id="3" LastName="Drew" Number="1" Age="36" BirthDate="06/06/1980">
+                <Api:Player.Team>
+                    <Api:Team Id="89" Name="Dallas" TeamColor="Blue">
+                        <Api:Team.Coach>
+                            <Api:Person FullName="David O'Hara" FirstName="David" Id="51" LastName="O'Hara" />
+                        </Api:Team.Coach>
+                        <Api:Team.Manager>
+                            <Api:Person FullName="Ric DeAnda" FirstName="Ric" Id="98" LastName="DeAnda" />
+                        </Api:Team.Manager>
+                        <Api:Team.Roster>
+                            <Markup:Array Type="{Markup:Type Api:Player}">
+                                <Api:Player FullName="Cori Drew" FirstName="Cori" Id="3" LastName="Drew" Number="1" />
+                                <Api:Player FullName="Kevin Baker" FirstName="Kevin" Id="3" LastName="Baker" Number="3" />
+                                <Api:Player FullName="Michael Dudley" FirstName="Michael" Id="7" LastName="Dudley" Number="7" />
+                                <Api:Player FullName="Craig Neuwirt" FirstName="Craig" Id="22" LastName="Neuwirt" Number="22" />
+                            </Markup:Array>
+                        </Api:Team.Roster>
+                    </Api:Team>
+                </Api:Player.Team>
+            </Api:Player>
+            <Api:Player FullName="Michael Dudley" FirstName="Michael" Id="7" LastName="Dudley" Number="7" Age="39" BirthDate="08/28/1977">
+                <Api:Player.Team>
+                    <Api:Team Id="89" Name="Dallas" TeamColor="Blue">
+                        <Api:Team.Coach>
+                            <Api:Person FullName="David O'Hara" FirstName="David" Id="51" LastName="O'Hara" />
+                        </Api:Team.Coach>
+                        <Api:Team.Manager>
+                            <Api:Person FullName="Ric DeAnda" FirstName="Ric" Id="98" LastName="DeAnda" />
+                        </Api:Team.Manager>
+                        <Api:Team.Roster>
+                            <Markup:Array Type="{Markup:Type Api:Player}">
+                                <Api:Player FullName="Cori Drew" FirstName="Cori" Id="3" LastName="Drew" Number="1" />
+                                <Api:Player FullName="Kevin Baker" FirstName="Kevin" Id="3" LastName="Baker" Number="3" />
+                                <Api:Player FullName="Michael Dudley" FirstName="Michael" Id="7" LastName="Dudley" Number="7" />
+                                <Api:Player FullName="Craig Neuwirt" FirstName="Craig" Id="22" LastName="Neuwirt" Number="22" />
+                            </Markup:Array>
+                        </Api:Team.Roster>
+                    </Api:Team>
+                </Api:Player.Team>
+            </Api:Player>
+            <Api:Player FullName="Craig Neuwirt" FirstName="Craig" Id="22" LastName="Neuwirt" Number="22" Age="46" BirthDate="07/19/1970">
+                <Api:Player.Team>
+                    <Api:Team Id="89" Name="Dallas" TeamColor="Blue">
+                        <Api:Team.Coach>
+                            <Api:Person FullName="David O'Hara" FirstName="David" Id="51" LastName="O'Hara" />
+                        </Api:Team.Coach>
+                        <Api:Team.Manager>
+                            <Api:Person FullName="Ric DeAnda" FirstName="Ric" Id="98" LastName="DeAnda" />
+                        </Api:Team.Manager>
+                        <Api:Team.Roster>
+                            <Markup:Array Type="{Markup:Type Api:Player}">
+                                <Api:Player FullName="Cori Drew" FirstName="Cori" Id="3" LastName="Drew" Number="1" />
+                                <Api:Player FullName="Kevin Baker" FirstName="Kevin" Id="3" LastName="Baker" Number="3" />
+                                <Api:Player FullName="Michael Dudley" FirstName="Michael" Id="7" LastName="Dudley" Number="7" />
+                                <Api:Player FullName="Craig Neuwirt" FirstName="Craig" Id="22" LastName="Neuwirt" Number="22" />
+                            </Markup:Array>
+                        </Api:Team.Roster>
+                    </Api:Team>
+                </Api:Player.Team>
+            </Api:Player>
+            <Api:Player FullName="Tim Rayburn" FirstName="Tim" Id="55" LastName="Rayburn" Number="55" Age="41" BirthDate="01/02/1976">
+                <Api:Player.Team>
+                    <Api:Team Id="89" Name="Dallas" TeamColor="Blue">
+                        <Api:Team.Coach>
+                            <Api:Person FullName="David O'Hara" FirstName="David" Id="51" LastName="O'Hara" />
+                        </Api:Team.Coach>
+                        <Api:Team.Manager>
+                            <Api:Person FullName="Ric DeAnda" FirstName="Ric" Id="98" LastName="DeAnda" />
+                        </Api:Team.Manager>
+                        <Api:Team.Roster>
+                            <Markup:Array Type="{Markup:Type Api:Player}">
+                                <Api:Player FullName="Cori Drew" FirstName="Cori" Id="3" LastName="Drew" Number="1" />
+                                <Api:Player FullName="Kevin Baker" FirstName="Kevin" Id="3" LastName="Baker" Number="3" />
+                                <Api:Player FullName="Michael Dudley" FirstName="Michael" Id="7" LastName="Dudley" Number="7" />
+                                <Api:Player FullName="Craig Neuwirt" FirstName="Craig" Id="22" LastName="Neuwirt" Number="22" />
+                            </Markup:Array>
+                        </Api:Team.Roster>
+                    </Api:Team>
+                </Api:Player.Team>
+            </Api:Player>
+        </Markup:Array>
+	</Api:Players.AllPlayers>
+</Api:Players>
