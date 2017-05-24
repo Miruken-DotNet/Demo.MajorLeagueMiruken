@@ -1,0 +1,13 @@
+﻿<Api:Player xmlns:Api="clr-namespace:MajorLeagueMiruken.Api;assembly=MajorLeagueMiruken.Api" xmlns:Markup="clr-namespace:System.Windows.Markup;assembly=System.Xaml" FullName="" FirstName="First Name" Id="49" LastName="Last Name" Number="65" BirthDate="11/17/1972">
+	<Api:Player.Team>
+		<Api:Team Id="27" Name="Team Name" TeamColor="Maroon">
+			<Api:Team.Coach>
+				<Api:Person FullName="Donec etiam adipiscing dis" FirstName="Accumsan vestibulum nam" Id="98" LastName="Sed cras bibendum curae aliquam"/>
+			</Api:Team.Coach>
+			<Api:Team.Manager>
+				<Api:Person FullName="Convallis vivamus" FirstName="Phasellus integer duis consequat" Id="89" LastName="Est fusce quisque aenean dictumst"/>
+			</Api:Team.Manager>
+            <Api:Team.Roster />
+        </Api:Team>
+	</Api:Player.Team>
+</Api:Player>

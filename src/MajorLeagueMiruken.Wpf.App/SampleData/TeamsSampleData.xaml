@@ -1,0 +1,79 @@
+﻿<Api:Teams xmlns:Api="clr-namespace:MajorLeagueMiruken.Api;assembly=MajorLeagueMiruken.Api" xmlns:Markup="clr-namespace:System.Windows.Markup;assembly=System.Xaml">
+	<Api:Teams.AllTeams>
+		<Markup:Array Type="{Markup:Type Api:Team}">
+			<Api:Team Id="42" Name="Calgary" TeamColor="White">
+				<Api:Team.Coach>
+					<Api:Person FullName="Wendy Brown" FirstName="Wendy" Id="39" LastName="Brown"/>
+				</Api:Team.Coach>
+				<Api:Team.Manager>
+					<Api:Person FullName="Brian Donaldson" FirstName="Brian" Id="55" LastName="Donaldson"/>
+				</Api:Team.Manager>
+				<Api:Team.Roster>
+					<Markup:Array Type="{Markup:Type Api:Player}">
+						<Api:Player FullName="Glen Donaldson" FirstName="Glen" Id="80" LastName="Donaldson" Number="11" />
+					</Markup:Array>
+				</Api:Team.Roster>
+			</Api:Team>
+			<Api:Team Id="55" Name="College Station" TeamColor="Maroon">
+				<Api:Team.Coach>
+					<Api:Person FullName="Ed Grannan" FirstName="Ed" Id="88" LastName="Grannan"/>
+				</Api:Team.Coach>
+				<Api:Team.Manager>
+					<Api:Person FullName="Mike Abney" FirstName="Mike" Id="14" LastName="Abney"/>
+				</Api:Team.Manager>
+				<Api:Team.Roster>
+                    <Markup:Array Type="{Markup:Type Api:Player}" />
+                </Api:Team.Roster>
+			</Api:Team>
+			<Api:Team Id="74" Name="Columbus" TeamColor="Red">
+				<Api:Team.Coach>
+                    <Api:Person FullName="Mark Kovacevich" FirstName="Mark" Id="78" LastName="Kovacevich"/>
+				</Api:Team.Coach>
+				<Api:Team.Manager>
+					<Api:Person FullName="Jacquie Bickel" FirstName="Jacquie" Id="55" LastName="Bickel"/>
+				</Api:Team.Manager>
+				<Api:Team.Roster>
+                    <Markup:Array Type="{Markup:Type Api:Player}" />
+                </Api:Team.Roster>
+			</Api:Team>
+			<Api:Team Id="89" Name="Dallas" TeamColor="Blue">
+				<Api:Team.Coach>
+					<Api:Person FullName="David O'Hara" FirstName="David" Id="51" LastName="O'Hara"/>
+				</Api:Team.Coach>
+				<Api:Team.Manager>
+					<Api:Person FullName="Ric DeAnda" FirstName="Ric" Id="98" LastName="DeAnda"/>
+				</Api:Team.Manager>
+				<Api:Team.Roster>
+					<Markup:Array Type="{Markup:Type Api:Player}">
+						<Api:Player FullName="Cori Drew" FirstName="Cori" Id="3" LastName="Drew" Number="1" />
+                        <Api:Player FullName="Kevin Baker" FirstName="Kevin" Id="3" LastName="Baker" Number="3" />
+                        <Api:Player FullName="Michael Dudley" FirstName="Michael" Id="7" LastName="Dudley" Number="7" />
+                        <Api:Player FullName="Craig Neuwirt" FirstName="Craig" Id="22" LastName="Neuwirt" Number="22" />
+					</Markup:Array>
+				</Api:Team.Roster>
+			</Api:Team>
+			<Api:Team Id="59" Name="Houston" TeamColor="LightBlue">
+				<Api:Team.Coach>
+					<Api:Person FullName="Ken Howard" FirstName="Ken" Id="49" LastName="Howard"/>
+				</Api:Team.Coach>
+				<Api:Team.Manager>
+					<Api:Person FullName="Devlin Liles" FirstName="Devlin" Id="72" LastName="Liles"/>
+				</Api:Team.Manager>
+				<Api:Team.Roster>
+                    <Markup:Array Type="{Markup:Type Api:Player}" />
+                </Api:Team.Roster>
+			</Api:Team>
+			<Api:Team Id="55" Name="Minneapolis" TeamColor="Orange">
+				<Api:Team.Coach>
+					<Api:Person FullName="Barb Gurstelle" FirstName="Barb" Id="15" LastName="Gurstelle"/>
+				</Api:Team.Coach>
+				<Api:Team.Manager>
+					<Api:Person FullName="Leroy Thydean" FirstName="Leroy" Id="10" LastName="Thydean"/>
+				</Api:Team.Manager>
+				<Api:Team.Roster>
+                    <Markup:Array Type="{Markup:Type Api:Player}" />
+                </Api:Team.Roster>
+			</Api:Team>
+		</Markup:Array>
+	</Api:Teams.AllTeams>
+</Api:Teams>
