@@ -10,7 +10,16 @@
         public string FirstName { get; set; }
         public string LastName  { get; set; }
 
-        public string FullName => $"{FirstName} {LastName}";
+        public string FullName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName))
+                    return null;
+
+                return $"{FirstName} {LastName}";
+            }
+        }
 
         public DateTime? BirthDate {
             get { return _birthDate; }
@@ -28,18 +37,15 @@
             }
         }
 
-        public int Age { get; set; }
+        public int? Age
+        {
+            get
+            {
+                if (!BirthDate.HasValue)
+                    return null;
 
-        //public int? Age {
-        //    get
-        //    {
-        //        if (!BirthDate.HasValue) return null;
-        //        else
-        //        {
-        //            var today = DateTime.Now;
-        //            var ts = DateTime.FromOADate()
-        //        }
-        //    }
-        //}
+               return DateTime.Today.Year - BirthDate.Value.Year;
+            }
+        }
     }
 }
