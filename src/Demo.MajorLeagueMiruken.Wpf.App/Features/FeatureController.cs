@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Castle.Core.Logging;
-using FluentValidation;
-
-namespace Demo.MajorLeagueMiruken.Wpf.App.Features
+﻿namespace Demo.MajorLeagueMiruken.Wpf.App.Features
 {
+    using System;
+    using System.Linq;
+    using System.Text;
+    using System.Threading;
+    using Castle.Core.Logging;
+    using FluentValidation;
+
     public abstract class FeatureController: Miruken.Mvc.Controller, IGuarded
     {
         private int _guarded;

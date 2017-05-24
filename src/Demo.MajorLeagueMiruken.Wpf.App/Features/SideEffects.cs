@@ -1,11 +1,11 @@
-﻿using System;
-using Miruken.Mvc.Views;
-using Miruken.Callback;
-using static Miruken.Protocol;
-using Miruken.Mvc.Options;
-
-namespace Demo.MajorLeagueMiruken.Wpf.App.Features
+﻿namespace Demo.MajorLeagueMiruken.Wpf.App.Features
 {
+    using System;
+    using Miruken.Mvc.Views;
+    using Miruken.Callback;
+    using static Miruken.Protocol;
+    using Miruken.Mvc.Options;
+
     public static class SideEffects
     {
         public static IHandler Guard(this IHandler handler, IGuarded guarded)

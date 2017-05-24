@@ -1,13 +1,12 @@
-﻿using Demo.MajorLeagueMiruken.Wpf.App.Features;
-using Demo.MajorLeagueMiruken.Wpf.App.Features.Header;
-using Demo.MajorLeagueMiruken.Wpf.App.Features.Players;
-using Demo.MajorLeagueMiruken.Wpf.App.Features.Teams;
-using Miruken.Context;
-using Miruken.Mvc.Options;
-using Miruken.Mvc.Views;
-
-namespace Demo.MajorLeagueMiruken.Wpf.App
+﻿namespace Demo.MajorLeagueMiruken.Wpf.App
 {
+    using Features;
+    using Features.Header;
+    using Features.Players;
+    using Features.Teams;
+    using Miruken.Context;
+    using Miruken.Mvc.Options;
+
     public class AppController : FeatureController, IHeader
     {
         private IContext Content { get; set; }

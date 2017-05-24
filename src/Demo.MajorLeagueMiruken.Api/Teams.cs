@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Demo.MajorLeagueMiruken.Api
+﻿namespace Demo.MajorLeagueMiruken.Api
 {
     public class Teams
     {
