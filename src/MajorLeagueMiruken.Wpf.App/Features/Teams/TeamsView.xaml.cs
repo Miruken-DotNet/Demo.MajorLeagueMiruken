@@ -1,6 +1,8 @@
 ﻿namespace MajorLeagueMiruken.Wpf.App.Features.Teams
 {
-    public partial class TeamsView
+    using Mvc.Features.Team;
+
+    public partial class TeamsView : ITeamsView
     {
         public TeamsView()
         {

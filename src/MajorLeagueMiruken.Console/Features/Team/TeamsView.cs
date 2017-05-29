@@ -3,9 +3,10 @@
     using System;
     using Api;
     using Miruken.Mvc.Console;
+    using Mvc.Features.Team;
     using Buffer = Miruken.Mvc.Console.Buffer;
 
-    public class TeamsView : View<TeamsController>
+    public class TeamsView : View<TeamsController>, ITeamsView
     {
         private readonly Buffer _buffer;
         private readonly Menu   _menu;

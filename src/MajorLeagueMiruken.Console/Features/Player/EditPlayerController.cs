@@ -3,6 +3,8 @@
     using Api;
     using Miruken.Concurrency;
     using Miruken.Mvc;
+    using Mvc.Features.Player;
+    using Mvc.Features.Team;
     using Team;
 
     public class EditPlayerController : Controller

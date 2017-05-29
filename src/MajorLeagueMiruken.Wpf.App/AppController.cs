@@ -6,6 +6,7 @@
     using Features.Teams;
     using Miruken.Context;
     using Miruken.Mvc.Options;
+    using Mvc.Features.Team;
 
     public class AppController : FeatureController, IHeader
     {
@@ -17,7 +18,7 @@
             Show<AppLayout>(layout =>
             {
                 AddRegion(layout.MenuRegion, m => m.Show<HeaderView>());
-                Content = AddRegion(layout.ContentRegion, c => c.Show<TeamsView>());
+                Content = AddRegion(layout.ContentRegion, c => c.Show<ITeamsView>());
             });
         }
 

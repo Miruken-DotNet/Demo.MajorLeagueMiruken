@@ -1,4 +1,4 @@
-﻿namespace MajorLeagueMiruken.Console.Features.Team
+﻿namespace MajorLeagueMiruken.Mvc.Features.Team
 {
     using Api;
     using Miruken.Callback;

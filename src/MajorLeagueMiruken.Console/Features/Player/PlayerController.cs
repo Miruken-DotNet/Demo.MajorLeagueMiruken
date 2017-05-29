@@ -2,6 +2,7 @@
 {
     using Api;
     using Miruken.Concurrency;
+    using Mvc.Features.Player;
 
     public class PlayerController : FeatureController
     {

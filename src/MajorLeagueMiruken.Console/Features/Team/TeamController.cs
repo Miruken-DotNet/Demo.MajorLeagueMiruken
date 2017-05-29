@@ -2,6 +2,7 @@
 {
     using Api;
     using Miruken.Concurrency;
+    using Mvc.Features.Team;
 
     public class TeamController : FeatureController
     {

@@ -1,4 +1,4 @@
-﻿namespace MajorLeagueMiruken.Console.Features.Env
+﻿namespace MajorLeagueMiruken.Mvc.Features.Env
 {
     using System;
     using System.Collections.Generic;

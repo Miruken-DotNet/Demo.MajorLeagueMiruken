@@ -1,8 +1,8 @@
-﻿namespace MajorLeagueMiruken.Console.Features.Player
+﻿namespace MajorLeagueMiruken.Mvc.Features.Player
 {
-    using Miruken.Concurrency;
     using Api;
     using Miruken.Callback;
+    using Miruken.Concurrency;
 
     public interface IPlayer : IResolving
     {

@@ -3,6 +3,7 @@
     using Api;
     using Miruken.Concurrency;
     using Miruken.Mvc;
+    using Mvc.Features.Team;
 
     public class EditTeamController : Controller
     {

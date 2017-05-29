@@ -13,6 +13,8 @@ using Miruken.Mvc.Wpf;
 
 namespace MajorLeagueMiruken.Wpf.App
 {
+    using Mvc.Features.Team;
+
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
@@ -27,7 +29,7 @@ namespace MajorLeagueMiruken.Wpf.App
                 container
                     .AddFacility<LoggingFacility>(f => f.UseNLog())
                     .Install(
-                        new MvcInstaller(Classes.FromThisAssembly()),
+                        new MvcInstaller(Classes.FromThisAssembly(), Classes.FromAssemblyContaining<ITeamsView>()),
                         new ConfigurationFactoryInstaller(Types.FromThisAssembly()),
                         new ResolvingInstaller(Classes.FromThisAssembly())
                         //,new MediatRInstaller(

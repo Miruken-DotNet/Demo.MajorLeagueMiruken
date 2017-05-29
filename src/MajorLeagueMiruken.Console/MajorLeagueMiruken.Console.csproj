@@ -81,7 +81,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\Env\HandlerMocks.cs" />
     <Compile Include="Features\Error\IError.cs" />
     <Compile Include="Features\Header\HeaderController.cs" />
     <Compile Include="Features\Header\HeaderView.cs" />
@@ -91,7 +90,6 @@
     <Compile Include="Features\Player\CreatePlayerView.cs" />
     <Compile Include="Features\Player\EditPlayerController.cs" />
     <Compile Include="Features\Player\EditPlayerView.cs" />
-    <Compile Include="Features\Player\IPlayer.cs" />
     <Compile Include="Features\Player\PlayersController.cs" />
     <Compile Include="Features\Player\PlayersView.cs" />
     <Compile Include="Features\Player\PlayerController.cs" />
@@ -101,7 +99,6 @@
     <Compile Include="Features\Team\EditTeamView.cs" />
     <Compile Include="Features\Team\CreateTeamView.cs" />
     <Compile Include="Features\FeatureController.cs" />
-    <Compile Include="Features\Team\ITeam.cs" />
     <Compile Include="Features\Team\TeamController.cs" />
     <Compile Include="Features\Team\TeamsController.cs" />
     <Compile Include="Features\Team\TeamsView.cs" />
@@ -117,6 +114,10 @@
     <Folder Include="Features\Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\MajorLeagueMiruken.Mvc\MajorLeagueMiruken.Mvc.csproj">
+      <Project>{fc999600-443d-4d6b-b980-70c0f643888d}</Project>
+      <Name>MajorLeagueMiruken.Mvc</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj">
       <Project>{d7e7a3a9-a33a-4a7f-bfa3-b2ca31ae99a8}</Project>
       <Name>MajorLeagueMiruken.Api</Name>

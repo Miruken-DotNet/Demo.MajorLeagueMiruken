@@ -10,7 +10,7 @@
     using Miruken.Mvc;
     using Miruken.Mvc.Castle;
     using Miruken.Mvc.Console;
-
+    using Mvc.Features.Team;
     using static Miruken.Protocol;
 
     class Program
@@ -23,7 +23,9 @@
                     FromAssembly.This(),
                     new MvcInstaller(Classes.FromThisAssembly()),
                     new ConfigurationFactoryInstaller(Types.FromThisAssembly()),
-                    new ResolvingInstaller(Classes.FromThisAssembly())
+                    new ResolvingInstaller(
+                        Classes.FromThisAssembly(),
+                        Classes.FromAssemblyContaining<ITeam>())
                 );
             });
 

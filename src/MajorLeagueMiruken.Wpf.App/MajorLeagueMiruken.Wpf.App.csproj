@@ -256,6 +256,10 @@
     <Resource Include="images\soccer-background.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\MajorLeagueMiruken.Mvc\MajorLeagueMiruken.Mvc.csproj">
+      <Project>{fc999600-443d-4d6b-b980-70c0f643888d}</Project>
+      <Name>MajorLeagueMiruken.Mvc</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj">
       <Project>{32b5e381-78a6-4adf-b008-f2c021d5586f}</Project>
       <Name>MajorLeagueMiruken.Api</Name>
