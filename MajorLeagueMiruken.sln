@@ -16,6 +16,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Console"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Mvc", "MajorLeagueMiruken.Mvc\MajorLeagueMiruken.Mvc.csproj", "{FC999600-443D-4D6B-B980-70C0F643888D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken", "MajorLeagueMiruken\MajorLeagueMiruken.csproj", "{F97B306D-F74F-40CE-841E-18D4E0948397}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{44EA3967-9481-42D7-A7F3-7C4B3AA5CE3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Api.Test", "Test\MajorLeagueMiruken.Api.Test\MajorLeagueMiruken.Api.Test.csproj", "{0F3468FD-C684-4D5B-A04A-6E09440A0464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Console.Test", "Test\MajorLeagueMiruken.Console.Test\MajorLeagueMiruken.Console.Test.csproj", "{A943D278-98DF-42E7-9CF3-41390CBC4FD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Mvc.Test", "MajorLeagueMiruken.Mvc.Test\MajorLeagueMiruken.Mvc.Test.csproj", "{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,8 +48,29 @@ Global
 		{FC999600-443D-4D6B-B980-70C0F643888D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC999600-443D-4D6B-B980-70C0F643888D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC999600-443D-4D6B-B980-70C0F643888D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F97B306D-F74F-40CE-841E-18D4E0948397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F97B306D-F74F-40CE-841E-18D4E0948397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F97B306D-F74F-40CE-841E-18D4E0948397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F97B306D-F74F-40CE-841E-18D4E0948397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F3468FD-C684-4D5B-A04A-6E09440A0464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F3468FD-C684-4D5B-A04A-6E09440A0464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F3468FD-C684-4D5B-A04A-6E09440A0464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F3468FD-C684-4D5B-A04A-6E09440A0464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A943D278-98DF-42E7-9CF3-41390CBC4FD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A943D278-98DF-42E7-9CF3-41390CBC4FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A943D278-98DF-42E7-9CF3-41390CBC4FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A943D278-98DF-42E7-9CF3-41390CBC4FD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0F3468FD-C684-4D5B-A04A-6E09440A0464} = {44EA3967-9481-42D7-A7F3-7C4B3AA5CE3B}
+		{A943D278-98DF-42E7-9CF3-41390CBC4FD6} = {44EA3967-9481-42D7-A7F3-7C4B3AA5CE3B}
+		{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70} = {44EA3967-9481-42D7-A7F3-7C4B3AA5CE3B}
 	EndGlobalSection
 EndGlobal

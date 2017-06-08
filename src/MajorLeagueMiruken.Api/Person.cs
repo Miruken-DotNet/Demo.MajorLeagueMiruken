@@ -26,14 +26,7 @@
             set
             {
                 if (_birthDate == value) return;
-                if (_birthDate.HasValue && _birthDate < DateTime.Now)
-                {
-                    _birthDate = new DateTime(_birthDate.Value.Year, _birthDate.Value.Month, _birthDate.Value.Day, 0, 0, 0);
-                }
-                else
-                {
-                    _birthDate = null;
-                }
+                _birthDate = value;
             }
         }
 
