@@ -114,13 +114,17 @@
     <Folder Include="Features\Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MajorLeagueMiruken.Mvc\MajorLeagueMiruken.Mvc.csproj">
+    <ProjectReference Include="..\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj">
+      <Project>{32b5e381-78a6-4adf-b008-f2c021d5586f}</Project>
+      <Name>MajorLeagueMiruken.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MajorLeagueMiruken.Mvc\MajorLeagueMiruken.Mvc.csproj">
       <Project>{fc999600-443d-4d6b-b980-70c0f643888d}</Project>
       <Name>MajorLeagueMiruken.Mvc</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj">
-      <Project>{d7e7a3a9-a33a-4a7f-bfa3-b2ca31ae99a8}</Project>
-      <Name>MajorLeagueMiruken.Api</Name>
+    <ProjectReference Include="..\MajorLeagueMiruken\MajorLeagueMiruken.csproj">
+      <Project>{f97b306d-f74f-40ce-841e-18d4e0948397}</Project>
+      <Name>MajorLeagueMiruken</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

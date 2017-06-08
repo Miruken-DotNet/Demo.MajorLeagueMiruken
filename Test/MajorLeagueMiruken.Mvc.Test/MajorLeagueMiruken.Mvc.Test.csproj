@@ -51,20 +51,20 @@
     <Compile Include="TeamHanderMocksTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MajorLeagueMiruken.Mvc\MajorLeagueMiruken.Mvc.csproj">
-      <Project>{fc999600-443d-4d6b-b980-70c0f643888d}</Project>
-      <Name>MajorLeagueMiruken.Mvc</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\src\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj">
-      <Project>{32b5e381-78a6-4adf-b008-f2c021d5586f}</Project>
-      <Name>MajorLeagueMiruken.Api</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Source\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj">
+      <Project>{32b5e381-78a6-4adf-b008-f2c021d5586f}</Project>
+      <Name>MajorLeagueMiruken.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\MajorLeagueMiruken.Mvc\MajorLeagueMiruken.Mvc.csproj">
+      <Project>{fc999600-443d-4d6b-b980-70c0f643888d}</Project>
+      <Name>MajorLeagueMiruken.Mvc</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

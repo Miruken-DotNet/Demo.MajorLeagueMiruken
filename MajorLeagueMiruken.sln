@@ -3,20 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Api", "src\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj", "{32B5E381-78A6-4ADF-B008-F2C021D5586F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Wpf.App", "src\MajorLeagueMiruken.Wpf.App\MajorLeagueMiruken.Wpf.App.csproj", "{32BD2D30-4B4E-433F-9626-CDE1F384BF77}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{681AC634-C93C-4EA8-8325-83659F58A078}"
 	ProjectSection(SolutionItems) = preProject
 		NuGet.Config = NuGet.Config
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Console", "src\MajorLeagueMiruken.Console\MajorLeagueMiruken.Console.csproj", "{C718D4FF-8E1F-4BBA-9DE6-2D33A272971B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Mvc", "MajorLeagueMiruken.Mvc\MajorLeagueMiruken.Mvc.csproj", "{FC999600-443D-4D6B-B980-70C0F643888D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken", "MajorLeagueMiruken\MajorLeagueMiruken.csproj", "{F97B306D-F74F-40CE-841E-18D4E0948397}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{44EA3967-9481-42D7-A7F3-7C4B3AA5CE3B}"
 EndProject
@@ -24,7 +14,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Api.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Console.Test", "Test\MajorLeagueMiruken.Console.Test\MajorLeagueMiruken.Console.Test.csproj", "{A943D278-98DF-42E7-9CF3-41390CBC4FD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Mvc.Test", "MajorLeagueMiruken.Mvc.Test\MajorLeagueMiruken.Mvc.Test.csproj", "{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Mvc.Test", "Test\MajorLeagueMiruken.Mvc.Test\MajorLeagueMiruken.Mvc.Test.csproj", "{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken", "Source\MajorLeagueMiruken\MajorLeagueMiruken.csproj", "{F97B306D-F74F-40CE-841E-18D4E0948397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Api", "Source\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj", "{32B5E381-78A6-4ADF-B008-F2C021D5586F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Console", "Source\MajorLeagueMiruken.Console\MajorLeagueMiruken.Console.csproj", "{C718D4FF-8E1F-4BBA-9DE6-2D33A272971B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Mvc", "Source\MajorLeagueMiruken.Mvc\MajorLeagueMiruken.Mvc.csproj", "{FC999600-443D-4D6B-B980-70C0F643888D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Wpf.App", "Source\MajorLeagueMiruken.Wpf.App\MajorLeagueMiruken.Wpf.App.csproj", "{32BD2D30-4B4E-433F-9626-CDE1F384BF77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,26 +32,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{32B5E381-78A6-4ADF-B008-F2C021D5586F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32B5E381-78A6-4ADF-B008-F2C021D5586F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32B5E381-78A6-4ADF-B008-F2C021D5586F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32B5E381-78A6-4ADF-B008-F2C021D5586F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{32BD2D30-4B4E-433F-9626-CDE1F384BF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32BD2D30-4B4E-433F-9626-CDE1F384BF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32BD2D30-4B4E-433F-9626-CDE1F384BF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32BD2D30-4B4E-433F-9626-CDE1F384BF77}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C718D4FF-8E1F-4BBA-9DE6-2D33A272971B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C718D4FF-8E1F-4BBA-9DE6-2D33A272971B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C718D4FF-8E1F-4BBA-9DE6-2D33A272971B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C718D4FF-8E1F-4BBA-9DE6-2D33A272971B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC999600-443D-4D6B-B980-70C0F643888D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC999600-443D-4D6B-B980-70C0F643888D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC999600-443D-4D6B-B980-70C0F643888D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC999600-443D-4D6B-B980-70C0F643888D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F97B306D-F74F-40CE-841E-18D4E0948397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F97B306D-F74F-40CE-841E-18D4E0948397}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F97B306D-F74F-40CE-841E-18D4E0948397}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F97B306D-F74F-40CE-841E-18D4E0948397}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F3468FD-C684-4D5B-A04A-6E09440A0464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F3468FD-C684-4D5B-A04A-6E09440A0464}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F3468FD-C684-4D5B-A04A-6E09440A0464}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -64,6 +44,26 @@ Global
 		{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F97B306D-F74F-40CE-841E-18D4E0948397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F97B306D-F74F-40CE-841E-18D4E0948397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F97B306D-F74F-40CE-841E-18D4E0948397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F97B306D-F74F-40CE-841E-18D4E0948397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B5E381-78A6-4ADF-B008-F2C021D5586F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B5E381-78A6-4ADF-B008-F2C021D5586F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B5E381-78A6-4ADF-B008-F2C021D5586F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B5E381-78A6-4ADF-B008-F2C021D5586F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C718D4FF-8E1F-4BBA-9DE6-2D33A272971B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C718D4FF-8E1F-4BBA-9DE6-2D33A272971B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C718D4FF-8E1F-4BBA-9DE6-2D33A272971B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C718D4FF-8E1F-4BBA-9DE6-2D33A272971B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC999600-443D-4D6B-B980-70C0F643888D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC999600-443D-4D6B-B980-70C0F643888D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC999600-443D-4D6B-B980-70C0F643888D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC999600-443D-4D6B-B980-70C0F643888D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32BD2D30-4B4E-433F-9626-CDE1F384BF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32BD2D30-4B4E-433F-9626-CDE1F384BF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BD2D30-4B4E-433F-9626-CDE1F384BF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32BD2D30-4B4E-433F-9626-CDE1F384BF77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

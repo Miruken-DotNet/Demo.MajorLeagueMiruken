@@ -58,16 +58,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj">
-      <Project>{32b5e381-78a6-4adf-b008-f2c021d5586f}</Project>
-      <Name>MajorLeagueMiruken.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\MajorLeagueMiruken.Console\MajorLeagueMiruken.Console.csproj">
-      <Project>{c718d4ff-8e1f-4bba-9de6-2d33a272971b}</Project>
-      <Name>MajorLeagueMiruken.Console</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>
