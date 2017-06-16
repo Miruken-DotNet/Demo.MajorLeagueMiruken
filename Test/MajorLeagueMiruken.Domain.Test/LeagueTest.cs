@@ -26,6 +26,28 @@ namespace MajorLeagueMiruken.Domain.Test
             Assert.AreSame(league.Teams.Single(), team);
         }
 
+        [TestMethod]
+        public void CanAddAPerson()
+        {
+            var league = GivenLeague();
+
+            var person = league.CreatePerson();
+
+            Assert.IsNotNull(person);
+        }
+
+        [TestMethod]
+        public void CanSetAManager()
+        {
+            var league = GivenLeague();
+            var team = league.CreateTeam();
+            var manager = league.CreatePerson();
+
+            team.Manager = manager;
+
+            Assert.AreSame(team.Manager, manager);
+        }
+
         private League GivenLeague()
         {
             return new League();

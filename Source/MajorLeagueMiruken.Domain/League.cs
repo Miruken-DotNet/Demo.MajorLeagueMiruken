@@ -1,5 +1,6 @@
 ﻿using Assisticant.Collections;
 using System.Collections.Generic;
+using System;
 
 namespace MajorLeagueMiruken.Domain
 {
@@ -14,6 +15,11 @@ namespace MajorLeagueMiruken.Domain
             var team = new Team();
             _teams.Add(team);
             return team;
+        }
+
+        public Person CreatePerson()
+        {
+            return new Person();
         }
     }
 }
