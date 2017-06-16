@@ -54,6 +54,19 @@ namespace MajorLeagueMiruken.Domain.Test
             Assert.AreSame(player2, team2.Roster.Single());
         }
 
+        [TestMethod]
+        public void AddingAPlayerTwiceHasNoEffect()
+        {
+            var team = GivenTeam();
+            var person = GivenPerson();
+
+            var player1 = team.AddPlayer(person);
+            var player2 = team.AddPlayer(person);
+
+            Assert.AreEqual(1, team.Roster.Count());
+            Assert.AreSame(player2, team.Roster.Single());
+        }
+
         private Team GivenTeam()
         {
             return _league.CreateTeam();
