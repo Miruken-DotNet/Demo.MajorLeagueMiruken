@@ -1,16 +1,19 @@
-﻿using System;
+﻿using Assisticant.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MajorLeagueMiruken.Domain
 {
     public class League
     {
+        private ObservableList<Team> _teams = new ObservableList<Team>();
+
+        public IEnumerable<Team> Teams => _teams;
+
         public Team CreateTeam()
         {
-            throw new NotImplementedException();
+            var team = new Team();
+            _teams.Add(team);
+            return team;
         }
     }
 }

@@ -53,7 +53,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj">
+    <ProjectReference Include="..\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj">
       <Project>{32b5e381-78a6-4adf-b008-f2c021d5586f}</Project>
       <Name>MajorLeagueMiruken.Api</Name>
     </ProjectReference>
