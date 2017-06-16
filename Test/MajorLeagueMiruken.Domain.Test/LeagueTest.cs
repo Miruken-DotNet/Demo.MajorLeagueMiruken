@@ -22,8 +22,8 @@ namespace MajorLeagueMiruken.Domain.Test
             var league = GivenLeague();
             var team = league.CreateTeam();
 
-            Assert.AreEqual(league.Teams.Count(), 1);
-            Assert.AreSame(league.Teams.Single(), team);
+            Assert.AreEqual(1, league.Teams.Count());
+            Assert.AreSame(team, league.Teams.Single());
         }
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace MajorLeagueMiruken.Domain.Test
 
             team.Manager = manager;
 
-            Assert.AreSame(team.Manager, manager);
+            Assert.AreSame(manager, team.Manager);
         }
 
         private League GivenLeague()
