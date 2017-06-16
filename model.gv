@@ -11,6 +11,9 @@ Manager->Person
 Coach->Team
 Coach->Person
 
+Transfer->Player
+Transfer->Player
+
 Number->Player
 Number->Number [label="*"]
 Name->Person

@@ -26,6 +26,11 @@ namespace MajorLeagueMiruken.Domain
         {
             var player = new Player(person, this);
             _roster.Add(player);
+            if (person.Player != null)
+            {
+                person.Player.Team._roster.Remove(person.Player);
+            }
+            person.Player = player;
             return player;
         }
     }
