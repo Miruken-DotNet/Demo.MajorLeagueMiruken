@@ -1,0 +1,27 @@
+﻿<Window x:Class="MajorLeagueAssisticant.Wpf.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MajorLeagueAssisticant.Wpf.App"
+        mc:Ignorable="d"
+        Title="Major League Assisticant" Height="460.319" Width="689.165">
+    <Window.DataContext>
+        <local:MainScreen />
+    </Window.DataContext>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="images/soccer-background.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ContentControl Content="{Binding MenuViewModel}" Grid.ColumnSpan="2"/>
+        <ContentControl Content="{Binding ContentViewModel}" Grid.Column="1" Grid.Row="1" Margin="0,0,0,0.5"/>
+    </Grid>
+</Window>
