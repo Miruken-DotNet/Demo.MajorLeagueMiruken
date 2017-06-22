@@ -25,8 +25,7 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
             var serviceAgent = GivenServiceAgent();
             var league = serviceAgent.League;
 
-            Promise loading = serviceAgent.LoadTeams();
-            await loading;
+            await serviceAgent.LoadTeams();
 
             Assert.AreEqual(1, league.Teams.Count());
         }

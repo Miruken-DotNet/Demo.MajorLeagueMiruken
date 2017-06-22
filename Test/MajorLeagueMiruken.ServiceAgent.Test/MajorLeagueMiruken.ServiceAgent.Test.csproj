@@ -47,6 +47,9 @@
     <Reference Include="Miruken, Version=1.1.0.72, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Miruken.1.1.0.72\lib\net461\Miruken.dll</HintPath>
     </Reference>
+    <Reference Include="Miruken.Mvc, Version=1.1.0.25, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Miruken.Mvc.1.1.0.25\lib\net461\Miruken.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
@@ -59,9 +62,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Source\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj">
+      <Project>{32B5E381-78A6-4ADF-B008-F2C021D5586F}</Project>
+      <Name>MajorLeagueMiruken.Api</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Source\MajorLeagueMiruken.Domain\MajorLeagueMiruken.Domain.csproj">
       <Project>{42D80C8A-9FB6-4CA8-910D-BB683E35F861}</Project>
       <Name>MajorLeagueMiruken.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\MajorLeagueMiruken.Mvc\MajorLeagueMiruken.Mvc.csproj">
+      <Project>{FC999600-443D-4D6B-B980-70C0F643888D}</Project>
+      <Name>MajorLeagueMiruken.Mvc</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
