@@ -8,6 +8,8 @@ using Miruken.Castle;
 using Castle.Windsor.Installer;
 using Miruken.Context;
 using Miruken.Mvc;
+using Castle.MicroKernel.Registration;
+using Miruken.Mvc.Castle;
 
 namespace MajorLeagueMiruken.ServiceAgent.Test
 {
@@ -57,7 +59,13 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
             var handler = new WindsorHandler(container =>
             {
                 container.Install(
-                    FromAssembly.Containing<LeagueServiceAgent>());
+                    FromAssembly.Containing<ILeagueServiceAgent>(),
+                    new MvcInstaller(Classes.FromThisAssembly()),
+                    new ConfigurationFactoryInstaller(Types.FromThisAssembly()),
+                    new ResolvingInstaller(
+                        Classes.FromThisAssembly(),
+                        Classes.FromAssemblyContaining<ILeagueServiceAgent>())
+                );
             });
 
             var appContext = new Context();

@@ -59,6 +59,9 @@
     <Reference Include="Miruken.Mvc, Version=1.1.0.25, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Miruken.Mvc.1.1.0.25\lib\net461\Miruken.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="Miruken.Mvc.Castle, Version=1.1.0.23, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Miruken.Mvc.Castle.1.1.0.23\lib\net461\Miruken.Mvc.Castle.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
