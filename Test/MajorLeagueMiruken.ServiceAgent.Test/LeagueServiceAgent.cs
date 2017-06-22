@@ -7,7 +7,13 @@ using System.Threading.Tasks;
 
 namespace MajorLeagueMiruken.ServiceAgent.Test
 {
-    public class LeagueServiceAgent : Controller
+    public interface ILeagueServiceAgent
+    {
+        Promise LoadTeams();
+
+        League League { get; }
+    }
+    public class LeagueServiceAgent : Controller, ILeagueServiceAgent
     {
         public League League { get; } = new League();
 
