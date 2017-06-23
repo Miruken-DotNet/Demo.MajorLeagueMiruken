@@ -15,7 +15,7 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
         public void InitiallyHasNoTeams()
         {
             var context = GivenAppContext();
-            var league = context.Resolve<League>();
+            var league = context.Resolve<ILeague>();
 
             Assert.AreEqual(0, league.Teams.Count());
         }
@@ -24,9 +24,8 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
         public async Task CanLoadATeam()
         {
             var context = GivenAppContext();
-            var handler = context.Resolve<LeagueServiceAgent>();
 
-            await P<ILeagueServiceAgent>(handler).LoadTeams()
+            await P<ILeagueServiceAgent>(context).LoadTeams()
                 .Then((r,s) =>
                 {
                     var league = context.Resolve<League>();
@@ -38,7 +37,9 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
         {
             var appContext = new Context();
             appContext.Store(new League());
-            appContext.AddHandlers(new LeagueServiceAgent());
+            var serviceAgent = new LeagueServiceAgent();
+            serviceAgent.Context = appContext;
+            appContext.AddHandlers(serviceAgent);
             return appContext;
         }
     }

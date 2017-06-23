@@ -1,7 +1,8 @@
 ﻿using MajorLeagueMiruken.Domain;
-using Miruken.Callback;
 using Miruken.Concurrency;
+using Miruken.Context;
 using System;
+using static Miruken.Protocol;
 
 namespace MajorLeagueMiruken.ServiceAgent.Test
 {
@@ -9,7 +10,7 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
     {
         Promise LoadTeams();
     }
-    public class LeagueServiceAgent : Handler, ILeagueServiceAgent
+    public class LeagueServiceAgent : ContextualHandler, ILeagueServiceAgent
     {
         public Promise LoadTeams()
         {
@@ -49,7 +50,7 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
             string coachFirstName, string coachLastName)
         {
             // TODO: I want to reach into the context and get my league.
-            League league = null;
+            var league = P<ILeague>(Context);
 
             var team = league.CreateTeam();
             team.Name = name;
