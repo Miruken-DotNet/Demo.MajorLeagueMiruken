@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:a="clr-namespace:Assisticant;assembly=Assisticant"
         xmlns:local="clr-namespace:MajorLeagueAssisticant.Wpf.App"
         mc:Ignorable="d"
         Title="Major League Assisticant" Height="460.319" Width="689.165">
@@ -18,10 +19,11 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="41"/>
+            <RowDefinition Height="90"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ContentControl Content="{Binding MenuViewModel}" Grid.ColumnSpan="2"/>
-        <ContentControl Content="{Binding ContentViewModel}" Grid.Column="1" Grid.Row="1" Margin="0,0,0,0.5"/>
+        <ContentControl Content="{Binding MenuViewport}" Grid.ColumnSpan="2" ContentTemplateSelector="{StaticResource ViewSelector}"/>
+        <ContentControl Content="{Binding MasterViewport}" Grid.Row="1" ContentTemplateSelector="{StaticResource ViewSelector}"/>
+        <ContentControl Content="{Binding DetailViewport}" Grid.Column="1" Grid.Row="1" ContentTemplateSelector="{StaticResource ViewSelector}"/>
     </Grid>
 </Window>

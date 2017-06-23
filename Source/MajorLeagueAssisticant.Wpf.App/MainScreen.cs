@@ -9,7 +9,8 @@ namespace MajorLeagueAssisticant.Wpf.App
 {
     class MainScreen : ViewModelLocatorBase
     {
-        public object MenuViewModel => null;
-        public object ContentViewModel => null;
+        public object MenuViewport => ViewModel(() => new Menu.MenuViewModel());
+        public object MasterViewport => ViewModel(() => new Teams.TeamsViewModel());
+        public object DetailViewport => ViewModel(() => new Teams.TeamDetailViewModel());
     }
 }
