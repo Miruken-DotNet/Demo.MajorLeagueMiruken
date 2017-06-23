@@ -39,6 +39,9 @@ namespace MajorLeagueAssisticant.Wpf.App
             builder.RegisterType<League>()
                 .AsSelf()
                 .SingleInstance();
+            builder.RegisterType<ServiceAgent>()
+                .AsSelf()
+                .SingleInstance();
 
             return builder.Build();
         }

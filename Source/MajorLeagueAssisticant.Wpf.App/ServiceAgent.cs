@@ -44,6 +44,8 @@ namespace MajorLeagueAssisticant.Wpf.App
                     "Minneapolis", Color.Orange,
                     "Ken", "Howard",
                     "Barb", "Gurtselle");
+
+                _teamsLoaded = true;
             }
         }
 
