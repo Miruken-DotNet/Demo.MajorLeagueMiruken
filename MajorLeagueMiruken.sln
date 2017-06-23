@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{681AC634-C93C-4EA8-8325-83659F58A078}"
 	ProjectSection(SolutionItems) = preProject
@@ -25,6 +25,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Mvc", "Source\MajorLeagueMiruken.Mvc\MajorLeagueMiruken.Mvc.csproj", "{FC999600-443D-4D6B-B980-70C0F643888D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Wpf.App", "Source\MajorLeagueMiruken.Wpf.App\MajorLeagueMiruken.Wpf.App.csproj", "{32BD2D30-4B4E-433F-9626-CDE1F384BF77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Domain.Test", "Test\MajorLeagueMiruken.Domain.Test\MajorLeagueMiruken.Domain.Test.csproj", "{4F3DAF02-4FD7-4BA7-8EC0-F0967A8B2686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Domain", "Source\MajorLeagueMiruken.Domain\MajorLeagueMiruken.Domain.csproj", "{42D80C8A-9FB6-4CA8-910D-BB683E35F861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.ServiceAgent.Test", "Test\MajorLeagueMiruken.ServiceAgent.Test\MajorLeagueMiruken.ServiceAgent.Test.csproj", "{291C38C7-E002-4247-B6B1-F3D4012B3542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueAssisticant.Wpf.App", "Source\MajorLeagueAssisticant.Wpf.App\MajorLeagueAssisticant.Wpf.App.csproj", "{2AB585A9-3001-4BB3-9A27-FAFBF19D2D93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,6 +72,22 @@ Global
 		{32BD2D30-4B4E-433F-9626-CDE1F384BF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32BD2D30-4B4E-433F-9626-CDE1F384BF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32BD2D30-4B4E-433F-9626-CDE1F384BF77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F3DAF02-4FD7-4BA7-8EC0-F0967A8B2686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F3DAF02-4FD7-4BA7-8EC0-F0967A8B2686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F3DAF02-4FD7-4BA7-8EC0-F0967A8B2686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F3DAF02-4FD7-4BA7-8EC0-F0967A8B2686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D80C8A-9FB6-4CA8-910D-BB683E35F861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D80C8A-9FB6-4CA8-910D-BB683E35F861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D80C8A-9FB6-4CA8-910D-BB683E35F861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D80C8A-9FB6-4CA8-910D-BB683E35F861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291C38C7-E002-4247-B6B1-F3D4012B3542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291C38C7-E002-4247-B6B1-F3D4012B3542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291C38C7-E002-4247-B6B1-F3D4012B3542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291C38C7-E002-4247-B6B1-F3D4012B3542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB585A9-3001-4BB3-9A27-FAFBF19D2D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB585A9-3001-4BB3-9A27-FAFBF19D2D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB585A9-3001-4BB3-9A27-FAFBF19D2D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB585A9-3001-4BB3-9A27-FAFBF19D2D93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,5 +96,7 @@ Global
 		{0F3468FD-C684-4D5B-A04A-6E09440A0464} = {44EA3967-9481-42D7-A7F3-7C4B3AA5CE3B}
 		{A943D278-98DF-42E7-9CF3-41390CBC4FD6} = {44EA3967-9481-42D7-A7F3-7C4B3AA5CE3B}
 		{DF97FBB2-33EC-4FCB-A00F-4CD9928AAA70} = {44EA3967-9481-42D7-A7F3-7C4B3AA5CE3B}
+		{4F3DAF02-4FD7-4BA7-8EC0-F0967A8B2686} = {44EA3967-9481-42D7-A7F3-7C4B3AA5CE3B}
+		{291C38C7-E002-4247-B6B1-F3D4012B3542} = {44EA3967-9481-42D7-A7F3-7C4B3AA5CE3B}
 	EndGlobalSection
 EndGlobal

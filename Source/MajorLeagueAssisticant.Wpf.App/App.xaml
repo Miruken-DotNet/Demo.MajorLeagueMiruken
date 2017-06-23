@@ -1,0 +1,48 @@
+﻿<Application x:Class="MajorLeagueAssisticant.Wpf.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MajorLeagueAssisticant.Wpf.App"
+             xmlns:converters="clr-namespace:MajorLeagueAssisticant.Wpf.App.Converters"
+             xmlns:a="clr-namespace:Assisticant;assembly=Assisticant.XAML"
+             xmlns:menu="clr-namespace:MajorLeagueAssisticant.Wpf.App.Menu"
+             xmlns:teams="clr-namespace:MajorLeagueAssisticant.Wpf.App.Teams"
+             xmlns:players="clr-namespace:MajorLeagueAssisticant.Wpf.App.Players"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="images/AppVectors.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <a:ViewSelector x:Key="ViewSelector"/>
+            <DataTemplate DataType="{x:Type menu:MenuViewModel}">
+                <menu:MenuView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type teams:TeamsViewModel}">
+                <teams:TeamsView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type teams:TeamDetailViewModel}">
+                <teams:TeamDetailView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type players:PlayersViewModel}">
+                <players:PlayersView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type players:PlayerDetailViewModel}">
+                <players:PlayerDetailView />
+            </DataTemplate>
+
+            <converters:ColorEnumToStringConverter x:Key="ColorEnumToStringConverter" />
+            <converters:VisibleWhenTrueConverter x:Key="VisibleWhenTrueConverter" />
+
+            <Style x:Key="FocusVisual">
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

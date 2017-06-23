@@ -1,0 +1,24 @@
+digraph "MajorLeageMiruken" {
+
+rankdir=BT
+
+Team->League
+Person->League
+Player->Team
+Player->Person
+Manager->Team
+Manager->Person
+Coach->Team
+Coach->Person
+
+Transfer->Player
+Transfer->Player
+
+Number->Player
+Number->Number [label="*"]
+Name->Person
+Name->Name [label="*"]
+Color->Team
+Color->Color [label="*"]
+
+}
