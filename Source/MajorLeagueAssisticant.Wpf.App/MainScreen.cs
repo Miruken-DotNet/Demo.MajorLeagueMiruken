@@ -1,16 +1,24 @@
 ﻿using Assisticant;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Autofac;
+using System.Reflection;
 
 namespace MajorLeagueAssisticant.Wpf.App
 {
     class MainScreen : ViewModelLocatorBase
     {
-        public object MenuViewport => ViewModel(() => new Menu.MenuViewModel());
-        public object MasterViewport => ViewModel(() => new Teams.TeamsViewModel());
-        public object DetailViewport => ViewModel(() => new Teams.TeamDetailViewModel());
+        private IContainer _container = BuildContainer();
+
+        public object MenuViewport => ViewModel(() => _container.Resolve<Menu.MenuViewModel>());
+        public object MasterViewport => ViewModel(() => _container.Resolve<Teams.TeamsViewModel>());
+        public object DetailViewport => ViewModel(() => _container.Resolve<Teams.TeamDetailViewModel>());
+
+        private static IContainer BuildContainer()
+        {
+            var builder = new ContainerBuilder();
+
+            builder.RegisterAssemblyTypes(Assembly.GetCallingAssembly());
+
+            return builder.Build();
+        }
     }
 }
