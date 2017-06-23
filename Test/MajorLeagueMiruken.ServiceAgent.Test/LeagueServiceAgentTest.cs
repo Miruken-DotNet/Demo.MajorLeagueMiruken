@@ -1,15 +1,10 @@
-﻿using System;
+﻿using MajorLeagueMiruken.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MajorLeagueMiruken.Domain;
-using System.Linq;
-using Miruken.Concurrency;
-using System.Threading.Tasks;
-using Miruken.Castle;
-using Castle.Windsor.Installer;
+using Miruken.Callback;
 using Miruken.Context;
-using Miruken.Mvc;
-using Castle.MicroKernel.Registration;
-using Miruken.Mvc.Castle;
+using System.Linq;
+using System.Threading.Tasks;
+using static Miruken.Protocol;
 
 namespace MajorLeagueMiruken.ServiceAgent.Test
 {
@@ -19,57 +14,31 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
         [TestMethod]
         public void InitiallyHasNoTeams()
         {
-            WithServiceAgent(serviceAgent =>
-            {
-                var league = serviceAgent.League;
+            var context = GivenAppContext();
+            var league = context.Resolve<League>();
 
-                Assert.AreEqual(0, league.Teams.Count());
-            });
+            Assert.AreEqual(0, league.Teams.Count());
         }
 
         [TestMethod]
         public async Task CanLoadATeam()
         {
-            await WithServiceAgent(async serviceAgent =>
-            {
-                var league = serviceAgent.League;
+            var context = GivenAppContext();
+            var handler = context.Resolve<LeagueServiceAgent>();
 
-                await serviceAgent.LoadTeams();
-
-                Assert.AreEqual(1, league.Teams.Count());
-            });
-        }
-
-        private void WithServiceAgent(Action<ILeagueServiceAgent> action)
-        {
-            var appContext = GivenAppContext();
-            var serviceAgent = Miruken.Protocol.P<ILeagueServiceAgent>(appContext);
-            action(serviceAgent);
-        }
-
-        private Task WithServiceAgent(Func<ILeagueServiceAgent, Task> asyncAction)
-        {
-            var appContext = GivenAppContext();
-            var serviceAgent = Miruken.Protocol.P<ILeagueServiceAgent>(appContext);
-            return asyncAction(serviceAgent);
+            await P<ILeagueServiceAgent>(handler).LoadTeams()
+                .Then((r,s) =>
+                {
+                    var league = context.Resolve<League>();
+                    Assert.AreEqual(6, league.Teams.Count());
+                });
         }
 
         private static Context GivenAppContext()
         {
-            var handler = new WindsorHandler(container =>
-            {
-                container.Install(
-                    FromAssembly.Containing<ILeagueServiceAgent>(),
-                    new MvcInstaller(Classes.FromThisAssembly()),
-                    new ConfigurationFactoryInstaller(Types.FromThisAssembly()),
-                    new ResolvingInstaller(
-                        Classes.FromThisAssembly(),
-                        Classes.FromAssemblyContaining<ILeagueServiceAgent>())
-                );
-            });
-
             var appContext = new Context();
-            appContext.AddHandlers(handler);
+            appContext.Store(new League());
+            appContext.AddHandlers(new LeagueServiceAgent());
             return appContext;
         }
     }
