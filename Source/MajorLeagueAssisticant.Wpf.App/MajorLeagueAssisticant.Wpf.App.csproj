@@ -64,6 +64,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\ColorEnumToStringConverter.cs" />
     <Compile Include="Menu\MenuViewModel.cs" />
     <Compile Include="NavigationModel.cs" />
     <Compile Include="Players\PlayerDetailView.xaml.cs">
@@ -71,14 +72,24 @@
     </Compile>
     <Compile Include="Players\PlayerDetailViewModel.cs" />
     <Compile Include="Players\PlayersViewModel.cs" />
+    <Compile Include="ServiceAgent.cs" />
+    <Compile Include="Teams\SampleData.cs" />
+    <Compile Include="Teams\TeamControl.xaml.cs">
+      <DependentUpon>TeamControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Teams\TeamDetailView.xaml.cs">
       <DependentUpon>TeamDetailView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Teams\TeamDetailViewModel.cs" />
+    <Compile Include="Teams\TeamHeaderViewModel.cs" />
     <Compile Include="Teams\TeamsView.xaml.cs">
       <DependentUpon>TeamsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Teams\TeamsViewModel.cs" />
+    <Page Include="Images\AppVectors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,6 +112,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Players\PlayersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teams\TeamControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,7 +161,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MajorLeagueMiruken.Domain\MajorLeagueMiruken.Domain.csproj">
+      <Project>{42D80C8A-9FB6-4CA8-910D-BB683E35F861}</Project>
+      <Name>MajorLeagueMiruken.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\soccer-background.jpg" />
   </ItemGroup>

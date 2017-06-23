@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Color.cs" />
     <Compile Include="League.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Player.cs" />

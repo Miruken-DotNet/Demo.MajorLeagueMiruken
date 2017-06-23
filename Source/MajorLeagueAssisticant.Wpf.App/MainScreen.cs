@@ -1,5 +1,6 @@
 ﻿using Assisticant;
 using Autofac;
+using MajorLeagueMiruken.Domain;
 using System.Reflection;
 
 namespace MajorLeagueAssisticant.Wpf.App
@@ -33,6 +34,9 @@ namespace MajorLeagueAssisticant.Wpf.App
             builder.RegisterAssemblyTypes(Assembly.GetCallingAssembly());
 
             builder.RegisterType<NavigationModel>()
+                .AsSelf()
+                .SingleInstance();
+            builder.RegisterType<League>()
                 .AsSelf()
                 .SingleInstance();
 
