@@ -65,6 +65,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\ColorEnumToStringConverter.cs" />
+    <Compile Include="Converters\VisibleWhenTrueConverter.cs" />
     <Compile Include="Menu\MenuViewModel.cs" />
     <Compile Include="NavigationModel.cs" />
     <Compile Include="Players\PlayerDetailView.xaml.cs">

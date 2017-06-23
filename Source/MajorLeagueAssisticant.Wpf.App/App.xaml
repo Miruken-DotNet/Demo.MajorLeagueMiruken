@@ -32,6 +32,7 @@
             </DataTemplate>
 
             <converters:ColorEnumToStringConverter x:Key="ColorEnumToStringConverter" />
+            <converters:VisibleWhenTrueConverter x:Key="VisibleWhenTrueConverter" />
 
             <Style x:Key="FocusVisual">
                 <Setter Property="Control.Template">

@@ -15,7 +15,7 @@
             <ImageBrush ImageSource="images/soccer-background.jpg" Stretch="UniformToFill" />
         </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="300"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
