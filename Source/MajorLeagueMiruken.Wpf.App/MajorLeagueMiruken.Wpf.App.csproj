@@ -71,24 +71,24 @@
       <HintPath>..\..\packages\MediatR.3.0.1\lib\net45\MediatR.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Miruken, Version=1.1.0.69, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Miruken.1.1.0.69\lib\net461\Miruken.dll</HintPath>
+    <Reference Include="Miruken, Version=1.1.0.72, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Miruken.1.1.0.72\lib\net461\Miruken.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Miruken.Castle, Version=1.1.0.28, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Miruken.Castle.1.1.0.28\lib\net461\Miruken.Castle.dll</HintPath>
+    <Reference Include="Miruken.Castle, Version=1.1.0.30, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Miruken.Castle.1.1.0.30\lib\net461\Miruken.Castle.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Miruken.Mvc, Version=1.1.0.22, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Miruken.Mvc.1.1.0.22\lib\net461\Miruken.Mvc.dll</HintPath>
+    <Reference Include="Miruken.Mvc, Version=1.1.0.25, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Miruken.Mvc.1.1.0.25\lib\net461\Miruken.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Miruken.Mvc.Castle, Version=1.1.0.20, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Miruken.Mvc.Castle.1.1.0.20\lib\net461\Miruken.Mvc.Castle.dll</HintPath>
+    <Reference Include="Miruken.Mvc.Castle, Version=1.1.0.23, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Miruken.Mvc.Castle.1.1.0.23\lib\net461\Miruken.Mvc.Castle.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Miruken.Mvc.Wpf, Version=1.1.0.17, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Miruken.Mvc.Wpf.1.1.0.17\lib\net461\Miruken.Mvc.Wpf.dll</HintPath>
+    <Reference Include="Miruken.Mvc.Wpf, Version=1.1.0.19, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Miruken.Mvc.Wpf.1.1.0.19\lib\net461\Miruken.Mvc.Wpf.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
