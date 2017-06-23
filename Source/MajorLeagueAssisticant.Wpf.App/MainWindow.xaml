@@ -19,7 +19,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="90"/>
+            <RowDefinition Height="63"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <ContentControl Content="{Binding MenuViewport}" Grid.ColumnSpan="2" ContentTemplateSelector="{StaticResource ViewSelector}"/>

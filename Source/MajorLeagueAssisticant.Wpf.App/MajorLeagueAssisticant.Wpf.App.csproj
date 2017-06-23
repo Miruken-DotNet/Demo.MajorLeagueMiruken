@@ -65,6 +65,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Menu\MenuViewModel.cs" />
+    <Compile Include="NavigationModel.cs" />
     <Compile Include="Players\PlayerDetailView.xaml.cs">
       <DependentUpon>PlayerDetailView.xaml</DependentUpon>
     </Compile>
