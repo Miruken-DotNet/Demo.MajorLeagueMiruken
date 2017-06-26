@@ -1,6 +1,8 @@
-﻿using MajorLeagueMiruken.Domain;
+﻿using Castle.MicroKernel.Registration;
+using MajorLeagueMiruken.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Miruken.Callback;
+using Miruken.Castle;
 using Miruken.Context;
 using System.Linq;
 using System.Threading.Tasks;
@@ -35,11 +37,28 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
 
         private static Context GivenAppContext()
         {
-            var appContext = new Context();
+            return new Context()
+                .WithWindsorHandler()
+                .WithLeague();
+        }
+    }
+
+    static class ContextExtensions
+    {
+        public static Context WithWindsorHandler(this Context appContext)
+        {
+            var windsorHandler = new WindsorHandler();
+            windsorHandler.Container.Register(Component
+                .For<ILeagueServiceAgent>()
+                .ImplementedBy<LeagueServiceAgent>()
+                .LifestyleCustom<ContextualLifestyleManager>());
+            appContext.AddHandlers(windsorHandler);
+            return appContext;
+        }
+
+        public static Context WithLeague(this Context appContext)
+        {
             appContext.Store(new League());
-            var serviceAgent = new LeagueServiceAgent();
-            serviceAgent.Context = appContext;
-            appContext.AddHandlers(serviceAgent);
             return appContext;
         }
     }

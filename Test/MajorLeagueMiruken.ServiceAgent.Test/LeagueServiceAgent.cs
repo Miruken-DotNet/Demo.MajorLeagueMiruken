@@ -49,7 +49,6 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
             string managerFirstName, string managerLastName,
             string coachFirstName, string coachLastName)
         {
-            // TODO: I want to reach into the context and get my league.
             var league = P<ILeague>(Context);
 
             var team = league.CreateTeam();
