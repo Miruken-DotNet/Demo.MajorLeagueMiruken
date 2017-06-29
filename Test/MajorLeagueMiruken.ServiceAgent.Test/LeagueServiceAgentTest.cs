@@ -3,6 +3,7 @@ using MajorLeagueMiruken.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Miruken.Callback;
 using Miruken.Castle;
+using Miruken.Container;
 using Miruken.Context;
 using System.Linq;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
         {
             var context = GivenAppContext();
 
-            await P<ILeagueServiceAgent>(context).LoadTeams()
+            await P<IContainer>(context).Resolve<ILeagueServiceAgent>().LoadTeams()
                 .Then((r,s) =>
                 {
                     var league = context.Resolve<League>();
@@ -47,11 +48,12 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
     {
         public static Context WithWindsorHandler(this Context appContext)
         {
-            var windsorHandler = new WindsorHandler();
-            windsorHandler.Container.Register(Component
-                .For<ILeagueServiceAgent>()
-                .ImplementedBy<LeagueServiceAgent>()
-                .LifestyleCustom<ContextualLifestyleManager>());
+            var windsorHandler = new WindsorHandler(container =>
+            {
+                container.Register(Component
+                    .For<ILeagueServiceAgent>()
+                    .ImplementedBy<LeagueServiceAgent>());
+            });
             appContext.AddHandlers(windsorHandler);
             return appContext;
         }
