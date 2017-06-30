@@ -1,4 +1,5 @@
 ﻿using MajorLeagueMiruken.Domain;
+using Miruken.Callback;
 using Miruken.Concurrency;
 using Miruken.Context;
 using System;
@@ -6,7 +7,7 @@ using static Miruken.Protocol;
 
 namespace MajorLeagueMiruken.ServiceAgent.Test
 {
-    public interface ILeagueServiceAgent
+    public interface ILeagueServiceAgent : IResolving
     {
         Promise LoadTeams();
     }

@@ -3,7 +3,6 @@ using MajorLeagueMiruken.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Miruken.Callback;
 using Miruken.Castle;
-using Miruken.Container;
 using Miruken.Context;
 using System.Linq;
 using System.Threading.Tasks;
@@ -28,7 +27,7 @@ namespace MajorLeagueMiruken.ServiceAgent.Test
         {
             var context = GivenAppContext();
 
-            await P<IContainer>(context).Resolve<ILeagueServiceAgent>().LoadTeams()
+            await P<ILeagueServiceAgent>(context).LoadTeams()
                 .Then((r,s) =>
                 {
                     var league = context.Resolve<League>();
