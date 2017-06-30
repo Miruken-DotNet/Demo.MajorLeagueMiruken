@@ -4,7 +4,14 @@ using System;
 
 namespace MajorLeagueMiruken.Domain
 {
-    public class League
+    public interface ILeague
+    {
+        Person CreatePerson();
+        Team CreateTeam();
+
+        IEnumerable<Team> Teams { get; }
+    }
+    public class League : ILeague
     {
         private ObservableList<Team> _teams = new ObservableList<Team>();
 
