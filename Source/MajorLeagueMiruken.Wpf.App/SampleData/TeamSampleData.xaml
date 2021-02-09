@@ -1,9 +1,0 @@
-﻿<Api:Team xmlns:Api="clr-namespace:MajorLeagueMiruken.Api;assembly=MajorLeagueMiruken.Api" xmlns:Markup="clr-namespace:System.Windows.Markup;assembly=System.Xaml" Id="34" Name="Vestibulum nam aenean" TeamColor="Red">
-	<Api:Team.Coach>
-		<Api:Person Age="13" FullName="Aliquam sed" FirstName="Mauris nullam adipiscing maecenas" Id="62" LastName="Curabitur class"/>
-	</Api:Team.Coach>
-	<Api:Team.Manager>
-		<Api:Person Age="79" FullName="Consequat convallis integer" FirstName="Praesent curae phasellus aptent donec" Id="16" LastName="Auctor accumsan"/>
-	</Api:Team.Manager>
-    <Api:Team.Roster />
-</Api:Team>
