@@ -1,7 +1,6 @@
-using System;
-
 namespace MajorLeagueMiruken.Api
 {
+    using System;
     public class PersonData
     {
         public int?      Id        { get; set; }
@@ -20,4 +19,5 @@ namespace MajorLeagueMiruken.Api
 
         public int? Age => Birthdate.HasValue ? DateTime.Today.Year - Birthdate.Value.Year : null;
     }
+
 }

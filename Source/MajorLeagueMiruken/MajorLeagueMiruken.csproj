@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj" />
+      <PackageReference Include="Miruken.Validate" Version="4.1.6-Alpha.23" />
     </ItemGroup>
 
 </Project>
