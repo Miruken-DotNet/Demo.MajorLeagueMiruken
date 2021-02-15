@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Miruken.AspNetCore" Version="1.0.7-Alpha.0" />
+        <PackageReference Include="Miruken.AspNetCore.Swagger" Version="1.0.7-Alpha.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\..\NuGet.Config">
+        <Link>NuGet.Config</Link>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MajorLeagueMiruken\MajorLeagueMiruken.csproj" />
+    </ItemGroup>
+
+</Project>
