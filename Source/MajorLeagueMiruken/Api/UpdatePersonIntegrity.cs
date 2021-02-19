@@ -8,20 +8,6 @@ namespace MajorLeagueMiruken.Api
     using Miruken.Callback;
     using Miruken.Validate.FluentValidation;
 
-    public class CreatePersonIntegrity : AbstractValidator<CreatePerson>
-    {
-        public CreatePersonIntegrity()
-        {
-            RuleFor(x => x.Person).NotNull()
-                .DependentRules(() =>
-                {
-                    RuleFor(x => x.Person.Id).Null();
-                    RuleFor(x => x.Person.FirstName).NotEmpty();
-                    RuleFor(x => x.Person.LastName).NotEmpty();
-                });
-        }
-    }
-
     public class UpdatePersonIntegrity : AbstractValidator<UpdatePerson>
     {
         public UpdatePersonIntegrity()
