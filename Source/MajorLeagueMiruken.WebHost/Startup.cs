@@ -2,6 +2,7 @@
 namespace MajorLeagueMiruken.WebHost
 {
     using Api;
+    using Api.Team;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.OpenApi.Models;

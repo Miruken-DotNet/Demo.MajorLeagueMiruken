@@ -1,4 +1,4 @@
-﻿namespace MajorLeagueMiruken.Api
+﻿namespace MajorLeagueMiruken.Api.Person
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -58,7 +58,7 @@
             _people.Values.FirstOrDefault(p => filter == null ||
                 filter.Id        == null || p.Id        == filter.Id &&
                 filter.FirstName == null || p.FirstName == filter.FirstName &&
-                filter.LastName  == null && p.LastName  == filter.LastName &&
-                filter.Birthdate == null && p.Birthdate == filter.Birthdate);
+                filter.LastName  == null || p.LastName  == filter.LastName &&
+                filter.Birthdate == null || p.Birthdate == filter.Birthdate);
     }
 }

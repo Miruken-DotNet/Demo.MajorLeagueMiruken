@@ -1,6 +1,7 @@
-namespace MajorLeagueMiruken.Api
+namespace MajorLeagueMiruken.Api.Team
 {
     using FluentValidation;
+    using Person;
 
     public class CreateTeamIntegrity : AbstractValidator<CreateTeam>
     {

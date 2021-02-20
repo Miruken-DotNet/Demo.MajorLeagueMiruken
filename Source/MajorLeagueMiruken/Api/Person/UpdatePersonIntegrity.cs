@@ -1,4 +1,4 @@
-namespace MajorLeagueMiruken.Api
+namespace MajorLeagueMiruken.Api.Person
 {
     using System.Threading;
     using System.Threading.Tasks;

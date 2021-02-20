@@ -1,5 +1,6 @@
-namespace MajorLeagueMiruken.Api
+namespace MajorLeagueMiruken.Api.Team
 {
+    using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
     using FluentValidation;
@@ -7,6 +8,7 @@ namespace MajorLeagueMiruken.Api
     using Miruken.Api;
     using Miruken.Callback;
     using Miruken.Validate.FluentValidation;
+    using Person;
 
     public class UpdateTeamIntegrity : AbstractValidator<UpdateTeam>
     {
@@ -47,7 +49,8 @@ namespace MajorLeagueMiruken.Api
             IHandler          composer)
         {
             var team = await composer.StashGetOrPut(async () => 
-                (await composer.Send(new GetTeam(new TeamData(id)))).Team);
+                (await composer.Send(new GetTeams(new TeamData(id))))
+                    .Teams.SingleOrDefault());
             if (team == null)
                 context.AddFailure("Team", $"Team with id {id} not found.");
         }
