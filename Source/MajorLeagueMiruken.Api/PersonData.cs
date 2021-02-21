@@ -3,7 +3,7 @@ namespace MajorLeagueMiruken.Api
     using System;
     
     public record PersonData(
-        int?      Id, 
+        int?      Id        = null, 
         string    FirstName = null,
         string    LastName  = null, 
         DateTime? Birthdate = null)

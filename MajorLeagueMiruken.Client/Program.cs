@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace MajorLeagueMiruken.Client
+﻿namespace MajorLeagueMiruken.Client
 {
+    using System;
     using System.Threading.Tasks;
     using Api;
     using Microsoft.Extensions.DependencyInjection;
@@ -21,14 +20,12 @@ namespace MajorLeagueMiruken.Client
                 .Build();
 
             var result = await handler.Send(new CreatePerson(
-                new PersonData(
-                    null, 
-                    "Michael", 
-                    "Dudley", 
-                    new DateTime(1977, 8, 28)
-                )).RouteTo(WebHost)
-            );
-
+                    new PersonData(
+                        FirstName: "Michael",
+                        LastName:  "Dudley",
+                        Birthdate: new DateTime(1977, 8, 28)
+                    )).RouteTo(WebHost));
+            
             Console.WriteLine(result.Person.Id);
         }
     }
