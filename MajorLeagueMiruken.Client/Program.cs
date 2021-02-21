@@ -7,6 +7,7 @@ namespace MajorLeagueMiruken.Client
     using Microsoft.Extensions.DependencyInjection;
     using Miruken.Api;
     using Miruken.Api.Route;
+    using Miruken.Http;
     using Miruken.Register;
 
     class Program
@@ -16,7 +17,7 @@ namespace MajorLeagueMiruken.Client
         static async Task Main(string[] args)
         {
             var handler = new ServiceCollection()
-                .AddMiruken()
+                .AddMiruken(options => options.WithHttp())
                 .Build();
 
             var result = await handler.Send(new CreatePerson(

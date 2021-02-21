@@ -11,6 +11,7 @@
 
     <ItemGroup>
       <PackageReference Include="Miruken" Version="5.0.0" />
+      <PackageReference Include="Miruken.Http" Version="4.1.7-Alpha.0" />
     </ItemGroup>
 
 </Project>
