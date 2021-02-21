@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Test\Tests\Tests.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.WebHost", "Source\MajorLeagueMiruken.WebHost\MajorLeagueMiruken.WebHost.csproj", "{CC72144E-5278-4647-8BF5-22F7F93C4CE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Client", "MajorLeagueMiruken.Client\MajorLeagueMiruken.Client.csproj", "{2780518B-BBC7-498B-A10E-3DF44175809E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{CC72144E-5278-4647-8BF5-22F7F93C4CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC72144E-5278-4647-8BF5-22F7F93C4CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC72144E-5278-4647-8BF5-22F7F93C4CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2780518B-BBC7-498B-A10E-3DF44175809E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2780518B-BBC7-498B-A10E-3DF44175809E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2780518B-BBC7-498B-A10E-3DF44175809E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2780518B-BBC7-498B-A10E-3DF44175809E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{791DFF90-B368-4DFF-80EE-4599196038F8} = {23FF6D4C-E4A3-4AF7-A044-052CB26826B1}
