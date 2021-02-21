@@ -5,8 +5,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Miruken.AspNetCore" Version="1.0.7-Alpha.0" />
-        <PackageReference Include="Miruken.AspNetCore.Swagger" Version="1.0.7-Alpha.0" />
+        <PackageReference Include="Miruken.AspNetCore" Version="5.0.0" />
+        <PackageReference Include="Miruken.AspNetCore.Swagger" Version="5.0.0" />
     </ItemGroup>
 
     <ItemGroup>
