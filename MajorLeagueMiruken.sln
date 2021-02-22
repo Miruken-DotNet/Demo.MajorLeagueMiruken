@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Test\Tests\Tests.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.WebHost", "Source\MajorLeagueMiruken.WebHost\MajorLeagueMiruken.WebHost.csproj", "{CC72144E-5278-4647-8BF5-22F7F93C4CE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Client", "MajorLeagueMiruken.Client\MajorLeagueMiruken.Client.csproj", "{2780518B-BBC7-498B-A10E-3DF44175809E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorLeagueMiruken.Client", "Source\MajorLeagueMiruken.Client\MajorLeagueMiruken.Client.csproj", "{2780518B-BBC7-498B-A10E-3DF44175809E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

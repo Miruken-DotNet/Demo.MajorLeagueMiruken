@@ -4,14 +4,14 @@
         <OutputType>Exe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Source\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj" />
-    </ItemGroup>
-
+    
     <ItemGroup>
       <PackageReference Include="Miruken" Version="5.0.0" />
       <PackageReference Include="Miruken.Http" Version="4.1.7-Alpha.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\MajorLeagueMiruken.Api\MajorLeagueMiruken.Api.csproj" />
     </ItemGroup>
 
 </Project>
