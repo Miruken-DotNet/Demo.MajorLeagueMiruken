@@ -1,7 +1,6 @@
 namespace MajorLeagueMiruken.Api.Person
 {
     using FluentValidation;
-    using Miruken.Api.Schedule;
 
     public class CreatePersonIntegrity : AbstractValidator<CreatePerson>
     {
@@ -14,7 +13,8 @@ namespace MajorLeagueMiruken.Api.Person
                     RuleFor(x => x.Person.FirstName).NotEmpty();
                     RuleFor(x => x.Person.LastName).NotEmpty();
                     RuleFor(x => x.Person.Birthdate).NotNull()
-                        .Must(PersonIntegrity.BeAValidAge);
+                        .Must(PersonIntegrity.BeAValidAge)
+                        .WithMessage("You can't be born in the future.");
                 });
         }
     }
