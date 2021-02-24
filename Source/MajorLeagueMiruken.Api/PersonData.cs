@@ -12,18 +12,11 @@ namespace MajorLeagueMiruken.Api
         {
             get
             {
-                if (Birthdate.HasValue)
-                {
-                    var today = DateTime.Today;
-                    var age = today.Year - Birthdate.Value.Year;
-                    if (Birthdate.Value.Date > today.AddYears(-age)) age--;
-                        
-                    return age;
-                }
-                else
-                {
-                    return null;
-                }
+                if (!Birthdate.HasValue) return null;
+                var today = DateTime.Today;
+                var age = today.Year - Birthdate.Value.Year;
+                if (Birthdate.Value.Date > today.AddYears(-age)) age--;
+                return age;
             }
         }
     }
