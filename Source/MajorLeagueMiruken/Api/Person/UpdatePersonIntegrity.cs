@@ -23,10 +23,9 @@ namespace MajorLeagueMiruken.Api.Person
                         .NotEmpty().Unless(x => x.Person.FirstName == null);
                     RuleFor(x => x.Person.LastName)
                         .NotEmpty().Unless(x => x.Person.LastName == null);
-                    RuleFor(x => x.Person.Birthdate).NotNull()
+                    RuleFor(x => x.Person.Birthdate)
                         .Must(PersonIntegrity.BeAValidAge)
-                        .WithMessage("Invalid {PropertyName}")
-                        .Unless(x => x.Person.Birthdate == null);;
+                        .WithMessage("Invalid {PropertyName}");
                 });
         }
         
