@@ -11,7 +11,7 @@
         private readonly Dictionary<int, PersonData> _people = new ();
 
         [Handles]
-        public PersonResult Get(GetPerson get) => new(Find(get.Person));
+        public PeopleResult Find(FindPeople find) => new(Match(find.Filter).ToArray());
 
         [Handles]
         public PersonResult Create(CreatePerson create)
@@ -45,20 +45,21 @@
         }
 
         [Handles]
-        public PersonResult Delete(DeletePerson delete)
+        public PeopleResult Delete(DeletePeople delete)
         {
-            var person = Find(delete.Person);
-            if (person != null)
-                _people.Remove(person.Id ?? 0);
+            var people = Match(delete.Filter).ToArray();
             
-            return new PersonResult(person);
+            foreach (var person in people)
+                _people.Remove(person.Id ?? 0);
+
+            return new PeopleResult(people);
         }
 
-        private PersonData Find(PersonData filter) =>
-            _people.Values.FirstOrDefault(p => filter == null ||
-                filter.Id        == null || p.Id        == filter.Id &&
-                filter.FirstName == null || p.FirstName == filter.FirstName &&
-                filter.LastName  == null || p.LastName  == filter.LastName &&
-                filter.Birthdate == null || p.Birthdate == filter.Birthdate);
+        private IEnumerable<PersonData> Match(PersonData filter) =>
+            _people.Values.Where(p => filter == null ||
+                (filter.Id        == null || p.Id        == filter.Id) &&
+                (filter.FirstName == null || p.FirstName == filter.FirstName) &&
+                (filter.LastName  == null || p.LastName  == filter.LastName) &&
+                (filter.Birthdate == null || p.Birthdate == filter.Birthdate));
     }
 }

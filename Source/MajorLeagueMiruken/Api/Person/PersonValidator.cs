@@ -30,7 +30,7 @@ namespace MajorLeagueMiruken.Api.Person
             CustomContext     context,
             IHandler          composer)
         {
-            var person = (await composer.Send(new GetPerson(new PersonData(id)))).Person;
+            var person = (await composer.Send(new FindPeople(new PersonData(id)))).Person;
             if (person == null)
                 context.AddFailure(property, $"Person with id {id} not found.");
         }

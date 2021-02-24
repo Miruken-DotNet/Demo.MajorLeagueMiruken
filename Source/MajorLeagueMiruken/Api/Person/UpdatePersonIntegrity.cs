@@ -36,7 +36,7 @@ namespace MajorLeagueMiruken.Api.Person
             IHandler          composer)
         {
             var person = await composer.StashGetOrPut(async () => 
-                (await composer.Send(new GetPerson(new PersonData(id)))).Person);
+                (await composer.Send(new FindPeople(new PersonData(id)))).Person);
             if (person == null)
                 context.AddFailure("Person", $"Person with id {id} not found.");
         }
