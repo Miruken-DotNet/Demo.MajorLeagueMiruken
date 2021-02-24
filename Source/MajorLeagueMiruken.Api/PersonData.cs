@@ -8,8 +8,23 @@ namespace MajorLeagueMiruken.Api
         string    LastName  = null, 
         DateTime? Birthdate = null)
     {
-        public int? Age => Birthdate.HasValue 
-            ? DateTime.Today.Year - Birthdate.Value.Year 
-            : null;
+        public int? Age
+        {
+            get
+            {
+                if (Birthdate.HasValue)
+                {
+                    var today = DateTime.Today;
+                    var age = today.Year - Birthdate.Value.Year;
+                    if (Birthdate.Value.Date > today.AddYears(-age)) age--;
+                        
+                    return age;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
     }
 }
