@@ -28,14 +28,14 @@
                             LastName: "Dudley",
                             Birthdate: new DateTime(1977, 8, 28)
                         )).RouteTo(WebHost))
-                        .Then((result, s) => { Console.WriteLine(result.Person.Id); });
+                        .Then((result, _) => Console.WriteLine(result.Person.Id));
                 batch.Send(new CreatePerson(
                         new PersonData(
                             FirstName: "Craig",
                             LastName: "Neuwirt",
                             Birthdate: new DateTime(1975, 1, 1)
                         )).RouteTo(WebHost))
-                        .Then((result, s) => { Console.WriteLine(result.Person.Id); });
+                        .Then((result, _) => Console.WriteLine(result.Person.Id));
             });
         }
     }
